@@ -1,0 +1,14 @@
+<div class="layout-row flex" style="margin-top: 100px">
+  <div class="layout-column flex flex-offset-33 flex-33 " style="text-align: center"><!--would put style in separate css file for real projects-->
+    <div class="flex">
+        {{paper-input class="flex-50" label="Enter URL to shorten" type="text" value=url onChange=(action "onUrlChange")}}
+    </div>
+    <div class="flex" style="margin-top: 10px">
+        {{#paper-button raised=true noink=true accent=true onClick=(action "onGenerateUrl" url)}}Generate Short Link{{/paper-button}}
+    </div>
+    <div class="flex">
+        {{#if shortend_url}}Your shortend URL is <a href="{{shortend_url}}">{{shortend_url}}</a>{{/if}}
+        {{error}}
+    </div>
+  </div>
+</div>

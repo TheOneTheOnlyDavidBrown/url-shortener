@@ -1,0 +1,2 @@
+class TinyUrlsController < ApplicationController
+end
