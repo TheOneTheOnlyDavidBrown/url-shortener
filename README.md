@@ -4,6 +4,8 @@
 This is a demo app built in Ruby on Rails with an Ember front end. Utilizing Docker to container-ize it. The front and back ends are separate containers and execute independently.
 
 # Installation & execution
+This is my first Docker container app so hopefully I'm not missing anything in the install :) If you can't run it let me know, I'd be happy to help.
+
 ## Front end
 `cd frontend`
 
