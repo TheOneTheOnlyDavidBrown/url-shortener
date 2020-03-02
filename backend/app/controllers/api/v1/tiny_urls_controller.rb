@@ -15,11 +15,9 @@ module Api::V1
       end
 
       def show
-        #@tiny_url = TinyUrl.find_by(tiny_url: tiny_url)
         render json: @tiny_url
       end
 
-      # POST /tiny_urls
       def create
         @tiny_url = TinyUrl.new(tiny_url_params)
         @tiny_url.tiny_url = SecureRandom.alphanumeric(7)
@@ -30,7 +28,6 @@ module Api::V1
         end
       end
 
-      # PATCH/PUT /tiny_urls/1
       def update
         if @tiny_url.update(tiny_url_params)
           render json: @tiny_url
@@ -39,7 +36,6 @@ module Api::V1
         end
       end
 
-      # DELETE /tiny_urls/1
       def destroy
         @tiny_url.destroy
       end

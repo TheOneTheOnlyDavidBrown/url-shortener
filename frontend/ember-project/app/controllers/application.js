@@ -19,6 +19,7 @@ export default class Application extends Controller {
         })
             .then((response) => response.json())
             .then((response) =>{
+                // SHOULD BE PULLING URL FROM ENV VARIABLE
                 this.set('shortend_url', `localhost:4200/${response.tiny_url}`);
                 this.set('url', '');
                 this.store.createRecord('tiny_url', response)
