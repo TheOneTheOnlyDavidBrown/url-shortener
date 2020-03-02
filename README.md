@@ -6,15 +6,22 @@ This is a demo app built in Ruby on Rails with an Ember front end. Utilizing Doc
 # Installation & execution
 ## Front end
 `cd frontend`
+
 `cd ember-app`
+
 `docker-compose up`
+
 App will be running on `localhost:4200`
 
 ## Back end
 `cd backend`
+
 `docker-compose up`
+
 `docker-compose run web rake db:craate`
+
 `docker-compose run web rake db:migrate`
+
 App will be running on `localhost:3000` with api end points prefixe with `/api/v1/`
 
 # Other considerations/what I'd change
