@@ -1,6 +1,6 @@
 # Url-shortener
 
-# about
+# About
 This is a demo app built in Ruby on Rails with an Ember front end. Utilizing Docker to container-ize it. The front and back ends are separate containers and execute independently.
 
 # Installation & execution
