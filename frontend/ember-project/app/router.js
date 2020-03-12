@@ -7,6 +7,6 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+  this.route('generate_tiny_url', { path: '/' });
   this.route('redirect_tiny_url', { path: '/:tiny_url' });
-  //this.route('redirect_tiny_url');
 });
