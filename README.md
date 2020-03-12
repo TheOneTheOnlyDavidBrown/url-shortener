@@ -7,9 +7,7 @@ This is a demo app built in Ruby on Rails with an Ember front end. Utilizing Doc
 This is my first Docker container app so hopefully I'm not missing anything in the install :) If you can't run it let me know, I'd be happy to help.
 
 ## Front end
-`cd frontend`
-
-`cd ember-app`
+`cd frontend/ember-app`
 
 `docker-compose up`
 
