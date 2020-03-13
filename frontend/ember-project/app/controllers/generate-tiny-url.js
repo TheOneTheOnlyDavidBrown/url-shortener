@@ -16,8 +16,9 @@ export default class GenerateTinyUrlController extends Controller {
         const localUrl = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
         this.set('shortend_url', `${localUrl}/${response.tiny_url}`);
         this.set('url', '');
-        this.store.createRecord('tiny_url', response)
-      });
+        this.store.createRecord('tiny_url', response);
+      })
+      .catch((error) => this.set('error', 'Error generating short URL. Make sure you have http or https in your URL'));
       this.set('error', '');
   }
 }

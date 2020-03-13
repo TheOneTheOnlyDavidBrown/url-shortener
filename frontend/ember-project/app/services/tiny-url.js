@@ -10,8 +10,7 @@ export default class TinyUrlService extends Service {
       },
       body: JSON.stringify({long_url}),
     })
-    .then((response) => response.json())
-    .catch((error) => this.set('error', 'Error generating short URL. Make sure you have http or https in your URL'));
+    .then((response) => response.json());
   }
   redirectUrl(tiny_url){
     return fetch(`${config.apiPath}/tiny_urls/${tiny_url}`, {
@@ -22,7 +21,6 @@ export default class TinyUrlService extends Service {
     .then((response) => response.json())
     .then((response) =>{
       window.location.replace(response.long_url);
-    })
-    .catch((error) => this.set('error', error));
+    });
   }
 }
